@@ -4,13 +4,12 @@ const { getFirestore, collection, doc, setDoc } = require('firebase/firestore');
 
 // Your Firebase configuration from lib/firebase.js
 const firebaseConfig = {
-  apiKey: "AIzaSyA-n3kBl1nYYFdYhaRA0uQqJUqHyKj16lY",
-  authDomain: "homestead-weather.firebaseapp.com",
-  projectId: "homestead-weather",
-  storageBucket: "homestead-weather.appspot.com",
-  messagingSenderId: "127735884048",
-  appId: "1:127735884048:web:e15f391c81385e3b875d95",
-  measurementId: "G-MSS6T0BW9X",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
